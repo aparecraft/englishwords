@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 248, 248);
+    background-color: rgb(255, 255, 255);
     display: center;
     justify-content: center;
     flex-direction: center;
@@ -8,10 +8,10 @@ body{
 
 .titulo1{
     color: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-family: 'Caveat', sans-serif;
+    font-size: 40px;
     text-align: center;
-    background-color: rgb(135, 180, 139);
+    background-color: rgb(255, 255, 255);
 }
 
 .lista__estilo{
@@ -55,6 +55,16 @@ body{
 }
 
 .button:hover{
-    background-color: rgb(135, 180, 139);
+    background-color: rgb(206, 115, 115);
 }
 
+.imagemLugar {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.imagemPrincipal{
+    width: 90%;
+    height: auto;
+}
