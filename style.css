@@ -68,3 +68,58 @@ body{
     width: 90%;
     height: auto;
 }
+
+.textoExercicio{
+    color: rgb(0, 0, 0);
+    font-family: 'Caveat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.imgModo{
+    text-align: center;
+}
+
+.imgIcon{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.restaurant_design{
+text-align: center;
+}
+
+.restaurantExercicio{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.audioTipo{
+    text-align: center;
+}
+
+.titulo2{
+        color: rgb(0, 0, 0);
+        font-family: 'Caveat', sans-serif;
+        font-size: 40px;
+        text-align: center;
+}
+
+.background{
+    background-image: url('imagens/restaurantcover.png');
+    opacity: 0.9;
+    height: 250px;
+    text-align: center;
+        
+}
+
+.activityone{
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-align: start;
+}
