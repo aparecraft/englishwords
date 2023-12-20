@@ -21,7 +21,7 @@
     <body>
         <div class="restaurant_design">
             <h2 class="titulo1"> Making requests</h2>
-<h2 class="restaurantExercicio"> 1- Listen the audio and complete with the missing words: <i>Can I, May I, Could I</i> or <i> I would like/I'd. </i></h2>
+<h2 class="restaurantExercicio"> 1- Listen the audio and complete with the missing words: <i>Can I, Could I</i> or <i> I would like/I'd like. </i></h2>
 
 </div>
 
@@ -31,7 +31,7 @@
         Your browser does not support the audio element.
     </audio>
 
-    <div class="activityone">
+    <div class="activityOne" id="dialogo">
         <p>
         <strong> Waitress:</strong> Hello, are you ready to order?
         <br>
@@ -41,21 +41,21 @@
         <br>
         <strong>Waitress:</strong> It’s spicy carrot soup.
         <br>
-        <strong>Woman:</strong> Hm, no. I don’t want that. I’ll start with the mushrooms, please. And after that, <input type="text" name="question1" id=can></input> I have the chicken?
+        <strong>Woman:</strong> Hm, no. I don’t want that. I’ll start with the mushrooms, please. And after that, <input type="text" id="question1" required aria-placeholder="can"></input> I have the chicken?
         <br>
-        <strong>Waitress:</strong> Sure and would you like potatoes chips or rice with your chicken?
+        <strong>Waitress:</strong> Sure and <input type="text" id="question2" required aria-placeholder="I would like"></input> potatoes chips or rice with your chicken?
         <br>
         <strong>Woman:</strong> I’ll have rice, please. Potatoes and chips are too heavy. 
         <br>
         <strong>Waitress:</strong> Fine and you, sir? 
         <br>
-        <strong>Man:</strong> Hm, I’d like the tomato and bean salad to start, please.
+        <strong>Man:</strong> Hm, <input type="text" id="question3" required aria-placeholder="I'd like"></input> the tomato and bean salad to start, please.
         <br>
         <strong>Waitress:</strong> Sure. And for your main course?
         <br>
-        <strong>Man:</strong> The bacon burger, please. Can I have it without cheese? 
+        <strong>Man:</strong> The bacon burger, please. <input type="text" id="question4" required aria-placeholder="can"></input> I have it without cheese? 
         <br>
-        <strong>Waitress:</strong> No cheese. Sure. And what would like to drink?
+        <strong>Waitress:</strong> No cheese. Sure. And what <input type="text" id="question5" required aria-placeholder="would you like"></input> to drink?
         <br>
         <strong>Woman:</strong> A beer for me, please. 
         <br>
@@ -63,7 +63,7 @@
         <br>
         <strong>Woman:</strong> That’s true, but I don’t want that today. 
         <br>
-        <strong>Man:</strong> Hm, I’ll have a beer too, and could we have some water too?
+        <strong>Man:</strong> Hm, I’ll have a beer too, and <input type="text" id="question6" required aria-placeholder="could"></input> we have some water too?
         <br>
         <strong>Waitress:</strong> Sure. I’ll bring your drinks in a moment.
         <br>
@@ -71,7 +71,7 @@
         <br>
         <strong>Woman:</strong> Delicious. Thank you.
         <br>
-        <strong>Waitress:</strong> Would you like dessert? The menu is on the wall over there.
+        <strong>Waitress:</strong> <input type="text" id="question7" required aria-placeholder="would you like"></input> dessert? The menu is on the wall over there.
         <br>
         <strong>Woman:</strong> Yes, I’d love one. But, hm, I can’t decide. The white chocolate cake or the orange cheesecake.
         <br>
@@ -89,7 +89,12 @@
         </p>
     </div>
 
-    <input type="submit" name="submit" value="Submit" onclick="result()"></input>
+   <p>
+    <button onclick="verificarResposta()">Verificar</button>
+    <button onclick="corrigirResposta()">Corrigir</button>
+
+    <p id="feedback"></p>
+   </p>
 </div>
 
     </body>
