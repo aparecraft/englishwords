@@ -108,14 +108,6 @@ text-align: center;
         text-align: center;
 }
 
-.background{
-    background-image: url('imagens/restaurantcover.png');
-    opacity: 0.9;
-    height: 250px;
-    text-align: center;
-        
-}
-
 .activityOne{
     line-height: 1.6;
     color: rgb(0, 0, 0);
@@ -128,4 +120,13 @@ text-align: center;
     color: rgb(0, 0, 0);
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
+}
+
+.backgroundCover{
+    width: 500px;
+    height: 400px;
+}
+
+.background{
+    text-align: center;
 }
