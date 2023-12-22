@@ -8,8 +8,8 @@ body{
 
 .titulo1{
     color: rgb(0, 0, 0);
-    font-family: 'Caveat', sans-serif;
-    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
     text-align: center;
     background-color: rgb(255, 255, 255);
 }
@@ -87,11 +87,11 @@ body{
     
 }
 
-.restaurant_design{
+.titulo_design{
 text-align: center;
 }
 
-.restaurantExercicio{
+.tipoExercicio{
     font-family: 'Poppins', sans-serif;
     color: black;
     font-size: 20px;
@@ -129,4 +129,33 @@ text-align: center;
 
 .background{
     text-align: center;
+}
+
+.backgroundCover2{
+    width: 400px;
+}
+
+.positionIcons{
+    text-align: center;
+    justify-content: flex;
+}
+
+.iconIndex{
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerDesign{
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.footer{
+    text-align: center;
+}
+
+.iconBack{
+    height: 60px;
+    width: flex;
 }
