@@ -47,11 +47,37 @@ function verificarResposta() {
             feedback.innerHTML = 'Incorreto. Tente novamente.';
         }
     }
-    
-    function corrigirResposta() {
-        for (const id in respostasCorretas) {
-            document.getElementById(id).value = '';  // Limpar o campo de resposta
+
+//Do houseExercise
+
+function verificarRespostas() {
+    const respostasEsperadas = {
+        resposta1: "chair",
+        resposta2: "bed",
+        resposta3: "kitchen",
+        resposta4: "bathroom",
+        resposta5: "tv", 
+        resposta6: "garage",
+        resposta7: "fridge",
+        resposta8: "wardrobe"
+    };
+
+    const feedback = document.getElementById('feedback2');
+    let todasCorretas = true;
+
+    for (let i = 1; i <= Object.keys(respostasEsperadas).length; i++) {
+        const respostaUsuario = document.getElementById(`resposta${i}`).value.trim().toLowerCase();
+        const respostaCorreta = respostasEsperadas[`resposta${i}`];
+
+        if (respostaUsuario !== respostaCorreta) {
+            todasCorretas = false;
+            break;
         }
-        feedback.innerHTML = '';  // Limpar o feedback
     }
-    
+
+    if (todasCorretas) {
+        feedback.textContent = "Todas as respostas estão corretas!";
+    } else {
+        feedback.textContent = "Pelo menos uma resposta está incorreta.";
+    }
+}

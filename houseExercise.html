@@ -11,14 +11,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Damion&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <script src="script.js" ></script>
         <title> House Exercises</title>
-        <link rel="icon" href="imagens/books.png">
+        <link rel="icon" href="icons/iconNotebook2.png">
 
-        <div class="background">
-        <img class="backgroundCover2" src="imagens/housecover.png"></img>
-        </div>
 <hr color="black">
     </head>
     <body>
+
+        <header>
+            <a href="exercise.html">
+    <img class=iconBack src="icons/iconBack (2).png" alt="back">
+    </a>
+        </header>
 
 <h1> <div class="tipo_design">
     <h2 class="titulo1">House vocabulary</h1>
@@ -29,15 +32,19 @@
     <p> You can sit on it. <input type="text" id="resposta1" required aria-placeholder="chair"> </p>
     <p> You can sleep on it. <input type="text" id="resposta2" required aria-placeholder="bed"> </p>
     <p> Room where you cook. <input type="text" id="resposta3" required aria-placeholder="kitchen"> </p>
-    <p> Room where you have a bath. <input type="text" id="resposta4" required aria-placeholder="bathroom"> </p>
-    <p> You can watch movies on it. <input type="text" id="resposta5" required aria-placeholder="TV"> </p>
-    <p> You can sleep on it. <input type="text" id="resposta2" required aria-placeholder="bed"> </p>
-    <p> You can sleep on it. <input type="text" id="resposta2" required aria-placeholder="bed"> </p>
-    <p> You can sleep on it. <input type="text" id="resposta2" required aria-placeholder="bed"> </p>
-    <p> You can sleep on it. <input type="text" id="resposta2" required aria-placeholder="bed"> </p>
-    <p> You can sleep on it. <input type="text" id="resposta2" required aria-placeholder="bed"> </p>
+    <p> Room where you take a shower. <input type="text" id="resposta4" required aria-placeholder="bathroom"> </p>
+    <p> You can watch movies on it. <input type="text" id="resposta5" required aria-placeholder="tv"> </p>
+    <p> Place where you keep your car. <input type="text" id="resposta6" required aria-placeholder="garage"> </p>
+    <p> You keep frozen food in it. <input type="text" id="resposta7" required aria-placeholder="fridge"> </p>
+    <p> You keep your clothes in it. <input type="text" id="resposta8" required aria-placeholder="wardrobe"> </p>
 
+    <p>
+        <div class="lugar__button">
+        <button class="button" onclick="verificarRespostas()">Verificar</button>
 
+    </div>
+        <p id="feedback2"></p>
+    </div>
 
 </div>
 </body>

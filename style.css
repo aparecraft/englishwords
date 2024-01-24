@@ -55,7 +55,7 @@ body{
 }
 
 .button:hover{
-    background-color: rgb(206, 115, 115);
+    background-color: rgb(123, 126, 117);
 }
 
 .imagemLugar {
@@ -95,6 +95,7 @@ text-align: center;
     font-family: 'Poppins', sans-serif;
     color: black;
     font-size: 20px;
+    
 }
 
 .audioTipo{
@@ -104,7 +105,7 @@ text-align: center;
 .titulo2{
         color: rgb(0, 0, 0);
         font-family: 'Caveat', sans-serif;
-        font-size: 30px;
+        font-size: 50px;
         text-align: center;
 }
 
@@ -141,8 +142,8 @@ text-align: center;
 }
 
 .iconIndex{
-    width: 30%;
     font-family: 'Poppins', sans-serif;
+
 }
 
 .footerDesign{
@@ -158,4 +159,50 @@ text-align: center;
 .iconBack{
     height: 60px;
     width: flex;
+}
+
+.listaExercicio{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.resources{
+    text-align: center;
+}
+
+.titulo3{
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.conteudo{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    margin: 16px 0;
+    box-sizing: border-box;
+    border-radius: 3%;
+}
+
+.conteudo_titulo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 8px 0;
+}
+
+.conteudo_descricao{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: 20px 0;
+}
+
+.imgMeio{
+    text-align: center;
 }
