@@ -44,9 +44,8 @@ body{
 }
 
 .button{
-    background-color: rgb(245, 245, 240);
-    border-color: white;
-    border-radius: 20px;
+    background-color: rgb(146, 146, 146);
+    border-color: rgb(0, 0, 0);
     color: black;
     font-family: 'Poppins', sans-serif;
     padding: 8px;
@@ -55,7 +54,7 @@ body{
 }
 
 .button:hover{
-    background-color: rgb(123, 126, 117);
+    background-color: rgb(199, 199, 199);
 }
 
 .imagemLugar {
@@ -205,4 +204,22 @@ text-align: center;
 
 .imgMeio{
     text-align: center;
+}
+
+.exercicio_modo{
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 13%;
+    width: 200px;
+	height: 200px;
+    display: inline-table;
+    text-align: center;
+}
+
+.imagemExercicio{
+    width: 150px;
 }

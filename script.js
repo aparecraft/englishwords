@@ -54,12 +54,14 @@ function verificarRespostas() {
     const respostasEsperadas = {
         resposta1: "chair",
         resposta2: "bed",
-        resposta3: "kitchen",
-        resposta4: "bathroom",
+        resposta3: "wardrobe",
+        resposta4: "sofa",
         resposta5: "tv", 
-        resposta6: "garage",
-        resposta7: "fridge",
-        resposta8: "wardrobe"
+        resposta6: "table",
+        resposta7: "bookshelf",
+        resposta8: "oven",
+        resposta9: "lamp",
+        resposta10: "window",
     };
 
     const feedback = document.getElementById('feedback2');
