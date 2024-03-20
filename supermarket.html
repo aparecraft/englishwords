@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html Lang = "en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aparecida Xavier">
+        <meta name="description" content="Exercises to practice supermarket's vocabulary"> 
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Damion&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="icons/iconNotebook2.png">
+        <script src="script.js" ></script>
+        <title> Supermarket Exercises</title>
+
+<hr color="black">
+    </head>
+    <body>
+
+        <header>
+            <a href="exercise.html">
+    <img class=iconBack src="icons/iconBack (2).png" alt="back">
+    </a>
+    <h1 class="titulo2">Let's shopping!</h1>
+        </header>
+            <div class="titulo_design">
+    <h2 class="tipoExercicio"> Listen to the audio and mark the items Amy is buying. </h2>
+    </div>
+    <div class="audioTipo">
+    <audio id="audioTipo" controls>
+        <source src="audios/English Listening - The Shopping List (mp3cut.net).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="modo_supermercado">
+
+        <div class="imagem_supermercado"> 
+            <img class="imagemExercicio" src="imagens/biscuits.jpg" alt="biscuits">
+            <input type="checkbox" class="respostaCorreta" id="biscuits" aria-label="biscuits"> 
+            </div>
+
+            <div class="imagem_supermercado"> 
+            <img class="imagemExercicio" src="imagens/watermelon.jpg" alt="watermelon">
+            <input type="checkbox" class="respostaCorreta" id="watermelon" aria-label="watermelon"> 
+           
+                <div class="imagem_supermercado"> 
+                <img class="imagemExercicio" src="imagens/beans.jpg" alt="beans">
+                <input type="checkbox" class="respostaErrada" id="beans" aria-label="beans"> 
+                
+                <div class="imagem_supermercado"> 
+                <img class="imagemExercicio" src="imagens/carrots.jpg" alt="carrots">
+                <input type="checkbox" class="respostaCorreta" id="carrots" aria-label="carrots"> 
+                
+                <div class="imagem_supermercado"> 
+                    <img class="imagemExercicio" src="imagens/beef.jpg" alt="beef">
+                    <input type="checkbox" class="respostaErrada" id="beef" aria-label="beef"> 
+                
+                    <div class="imagem_supermercado"> 
+                    <img class="imagemExercicio" src="imagens/crisps.jpg" alt="crisps">
+                    <input type="checkbox" class="respostaCorreta" id="crisps" aria-label="crisps"> 
+                     
+                    <div class="imagem_supermercado"> 
+                        <img class="imagemExercicio" src="imagens/fizzy drinks.jpg" alt="fizzy drinks">
+                        <input type="checkbox" class="respostaCorreta" id="fizzy drinks" aria-label="fizzy drinks"> 
+                        
+                        <div class="imagem_supermercado"> 
+                        <img class="imagemExercicio" src="imagens/oil.jpg" alt="oil">
+                        <input type="checkbox" class="respostaErrada" id="oil" aria-label="oil"> 
+                        
+                        <div class="imagem_supermercado"> 
+                            <img class="imagemExercicio" src="imagens/olive oil.jpg" alt="olive oil">
+                            <input type="checkbox" class="respostaCorreta" id="olive oil" aria-placeholder="olive oil"> 
+                            
+                            <div class="imagem_supermercado"> 
+                            <img class="imagemExercicio" src="imagens/orange juicee.jpg" alt="orange juice">
+                            <input type="checkbox" class="respostaCorreta" id="orange juice" aria-label="orange juice"> 
+                            
+                            <div class="imagem_supermercado"> 
+                                <img class="imagemExercicio" src="imagens/popcorn.jpg" alt="popcorn">
+                                <input type="checkbox" class="respostaCorreta" id="popcorn" aria-label="popcorn"> 
+                
+    </div>
+    <button class="button" id="verificarButton">Verificar</button>
+
+    <script>
+        document.getElementById('verificarButton').addEventListener('click', function () {
+            var respostasCorretas = ["biscuits", "watermelon", "carrots", "crisps", "fizzy drinks", "olive oil", "orange juice", "popcorn"]; // Adicione mais imagens corretas conforme necessário
+            var respostasErradas = ["beans", "oil", "beef"]; // Adicione mais imagens erradas conforme necessário
+            var respostasSelecionadas = [];
+
+            var checkboxesCorretas = document.querySelectorAll('.respostaCorreta:checked');
+            checkboxesCorretas.forEach(function (checkbox) {
+                respostasSelecionadas.push(checkbox.getAttribute('id'));
+            });
+
+            var checkboxesErradas = document.querySelectorAll('.respostaErrada:checked');
+            checkboxesErradas.forEach(function (checkbox) {
+                respostasSelecionadas.push(checkbox.getAttribute('id'));
+            });
+
+            var todasCorretas = respostasCorretas.every(function (resposta) {
+                return respostasSelecionadas.includes(resposta);
+            });
+
+            var algumaErrada = respostasSelecionadas.some(function (resposta) {
+                return respostasErradas.includes(resposta);
+            });
+
+            if (todasCorretas && !algumaErrada) {
+                alert("Parabéns! Você selecionou todas as imagens corretas e nenhuma imagem errada.");
+            } else {
+                alert("Algumas seleções estão incorretas. Tente novamente.");
+            }
+        });
+    </script>
+
+        </body>

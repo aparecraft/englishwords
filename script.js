@@ -1,4 +1,4 @@
-
+//Script das palavras: word.html
 function playAudio() {
     let x = document.getElementById("myAudio");
     x.play();
@@ -8,6 +8,7 @@ function pauseAudio() {
     x.pause();
 }       
 
+//Script do exercício da aba restaurantes: restauranteExercise.html
 function verificarResposta() {
     const feedback = document.getElementById('feedback');}
     
@@ -48,7 +49,7 @@ function verificarResposta() {
         }
     }
 
-//Do houseExercise
+//Script do exercício de casa, houseExercise.html
 
 function verificarRespostas() {
     const respostasEsperadas = {
@@ -83,3 +84,16 @@ function verificarRespostas() {
         feedback.textContent = "Pelo menos uma resposta está incorreta.";
     }
 }
+
+//// scripts do Zoo Game
+const cards = document.querySelectorAll('.memory-card');
+
+function flipCard() {
+  this.classList.toggle('flip');
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+//scrip do supermercado
+
