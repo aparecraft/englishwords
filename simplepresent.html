@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aparecida Xavier">
+        <meta name="description" content="Simple Present"> 
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Damion&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="icons/iconNotebook2.png">
+        <title> Simple Present Exercises</title>
+    </head>
+    <body>
+        <header>
+            <a href="exercise.html">
+    <img class=iconBack src="icons/iconBack (2).png" alt="back">
+    </a>
+    <h1 class="titulo2">Simple Present</h1>
+        </header>
+            <div class="titulo_design">
+    <h2 class="tipoExercicio"> </h2>
+    </div>
+    <div class="atividade_simplepast">
+        <h2 class="tipoExercicio">Fill with the correct form of the verb in the Simple Present tense.</h2>
+        </div>
+        <div class="atividade_simplepast">
+        <p> My brother <input type="text" id="question1" required aria-placeholder="wakes up"></input> <strong>(to wake up)</strong> at 6 AM every day.</p>
+        <p> She <input type="text" id="question2" required aria-placeholder="goes"></input> <strong>(to go)</strong> for a run in the park.</p>
+        <p> I <input type="text" id="question3" required aria-placeholder="eat"></input> <strong>(to eat)</strong> breakfast every morning.</p>
+        <p> They <input type="text" id="question4" required aria-placeholder="play"></input> <strong>(to play)</strong> soccer after school.</p>
+        <p> We <input type="text" id="question5" required aria-placeholder="listen"></input> <strong>(to listen)</strong> to music in the car.</p>
+        <p> The train <input type="text" id="question6" required aria-placeholder="arrives"></input> <strong>(to arrive)</strong> at 9 o'clock.</p>
+        <p> You <input type="text" id="question7" required aria-placeholder="read"></input> <strong>(to read)</strong> books on the weekend.</p>
+        <p> The company <input type="text" id="question8" required aria-placeholder="closes"></input> <strong>(to close)</strong> at 10 PM.</p>
+        <p> My mother <input type="text" id="question9" required aria-placeholder="drinks"></input> <strong>(to drink)</strong> tea every afternoon.</p>
+        <p> I <input type="text" id="question10" required aria-placeholder="watch"></input> <strong>(to watch)</strong> movies before bed.</p>
+        <p> He<input type="text" id="question11" required aria-placeholder="drives"></input> <strong>(to drive)</strong> to work.</p>
+
+        <div class="lugar__button">
+            <button class="button" onclick="verificarRespostaExercicio2()">Verificar</button>
+        </div>
+        <div class="tipoExercicio">
+            <p class="feedback2"></p>
+        </div>
+    
+        <script>
+            const respostasCorretas = {
+                'question1': 'wakes up',
+                'question2': 'goes',
+                'question3': 'eat',
+                'question4': 'play',
+                'question5': 'listen',
+                'question6': 'arrives',
+                'question7': 'read',
+                'question8': 'closes',
+                'question9': 'drinks',
+                'question10': 'watch',
+                'question11': 'drives',
+            };
+    
+            function verificarRespostaExercicio2() {
+                const feedback = document.querySelector('.feedback2');
+                let todasCorretas = true;
+    
+                // Verificar cada resposta do usuário em comparação com as respostas corretas
+                for (const id in respostasCorretas) {
+                    const respostaUsuario = document.getElementById(id).value.trim().toLowerCase();
+                    const respostaCorreta = respostasCorretas[id].toLowerCase();
+    
+                    if (respostaUsuario !== respostaCorreta) {
+                        todasCorretas = false;
+                        break;  // Se uma resposta estiver incorreta, para a verificação
+                    }
+                }
+    
+                if (todasCorretas) {
+                alert('Todas as respostas estão corretas!');
+            } else {
+                alert('Incorreto. Tente novamente.');
+            }
+        }
+        </script>
+        </body>
+        </html>

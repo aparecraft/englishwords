@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aparecida Xavier">
+        <meta name="description" content="Future"> 
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Damion&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="icons/iconNotebook2.png">
+        <title> Future Exercises</title>
+    </head>
+    <body>
+        <header>
+            <a href="exercise.html">
+    <img class=iconBack src="icons/iconBack (2).png" alt="back">
+    </a>
+    <h1 class="titulo2">Future</h1>
+        </header>
+            <div class="titulo_design">
+
+    <div class="atividade_simplepast">
+        <h2 class="tipoExercicio">Listen to the audio and mark the right answers about their trip plans.</h2>
+   
+        <div class="audioTipo">
+            <audio id="audioTipo" controls>
+                <source src="audios/Making Plans _ Planning a Holiday _ How to Make Plans in English _ Future with Going to.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+    </div>
+
+<p> <strong>1. On Monday:</p></strong>
+<p> They are going to arrive at the airport at 6 AM. <input type="checkbox" class="respostaCorreta" id="1" aria-label="1"></p>
+<p> They are going to have dinner alone.<input type="checkbox" class="respostaErrada" id="2" aria-label="2"></p>
+<p> They are going to have dinner with Ken and David.<input type="checkbox" class="respostaCorreta" id="3" aria-label="3"></p>
+<p> They are going to arrive at night.<input type="checkbox" class="respostaErrada" id="4" aria-label="4"></p>
+
+<p> <strong>2. On Tuesday:</strong></p>
+<p> They are going to a bar. <input type="checkbox" class="respostaErrada" id="5" aria-label="5"></p>
+<p> They are going to an Italian restaurant.<input type="checkbox" class="respostaCorreta" id="6" aria-label="6"></p>
+<p> They are going to a tour at the city.<input type="checkbox" class="respostaCorreta" id="7" aria-label="7"></p>
+<p> They are going to the museums.<input type="checkbox" class="respostaCorreta" id="8" aria-label="8"></p>
+
+<p> <strong>3. On Wednesday:</strong></p>
+<p> They are going to fishing in Ken's boat. <input type="checkbox" class="respostaCorreta" id="9" aria-label="9"></p>
+<p> They are going to cook the fish in the beach.<input type="checkbox" class="respostaCorreta" id="10" aria-label="10"></p>
+<p> They are going to a restaurant to eat fish.<input type="checkbox" class="respostaErrada" id="11" aria-label="11"></p>
+
+<p> <strong>4. On Thursday:</strong></p>
+<p> They are going to watch a football game at the stadium. <input type="checkbox" class="respostaCorreta" id="12" aria-label="12"></p>
+<p> They are going to watch a football game at TV with Ken.<input type="checkbox" class="respostaErrada" id="13" aria-label="13"></p>
+
+<p> <strong>5. On Friday:</strong></p>
+<p> They are going to a restaurant. <input type="checkbox" class="respostaErrada" id="14" aria-label="14"></p>
+<p> They are going to take a rest.<input type="checkbox" class="respostaCorreta" id="15" aria-label="15"></p>
+
+</div>
+<button class="button" id="verificarButton">Verificar</button>
+
+<script>
+    document.getElementById('verificarButton').addEventListener('click', function () {
+        var respostasCorretas = ["1", "3", "6", "7", "8", "9", "10", "12", "15"]; // Adicione mais imagens corretas conforme necessário
+        var respostasErradas = ["2", "4", "5", "11", "13", "14"]; // Adicione mais imagens erradas conforme necessário
+        var respostasSelecionadas = [];
+
+        var checkboxesCorretas = document.querySelectorAll('.respostaCorreta:checked');
+        checkboxesCorretas.forEach(function (checkbox) {
+            respostasSelecionadas.push(checkbox.getAttribute('id'));
+        });
+
+        var checkboxesErradas = document.querySelectorAll('.respostaErrada:checked');
+        checkboxesErradas.forEach(function (checkbox) {
+            respostasSelecionadas.push(checkbox.getAttribute('id'));
+        });
+
+        var todasCorretas = respostasCorretas.every(function (resposta) {
+            return respostasSelecionadas.includes(resposta);
+        });
+
+        var algumaErrada = respostasSelecionadas.some(function (resposta) {
+            return respostasErradas.includes(resposta);
+        });
+
+        if (todasCorretas && !algumaErrada) {
+            alert("Parabéns! Você selecionou todas as respostas corretas!");
+        } else {
+            alert("Algumas seleções estão incorretas. Tente novamente.");
+        }
+    });
+</script>
+
+    </body>
+    </html>
